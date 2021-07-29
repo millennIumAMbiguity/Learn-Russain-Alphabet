@@ -12,7 +12,7 @@ namespace Learn_Russian_Alphabet
 		
 		public CyrillicTranslator()
 		{
-			string path = Form1.Resources.GetString("Path-Alphabet");
+			string path = Form1.Resources.GetString("Path-Translation");
 			if (path != null && File.Exists(path)) {
 				using (var file = new StreamReader(path)) {
 					string    line;

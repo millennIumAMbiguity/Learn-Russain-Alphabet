@@ -138,4 +138,7 @@
   <data name="Path-TypeWord" xml:space="preserve">
     <value>Data\TypeWord</value>
   </data>
+  <data name="Path-Translation" xml:space="preserve">
+    <value>Data\TranslationAlphabet</value>
+  </data>
 </root>

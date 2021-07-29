@@ -16,29 +16,28 @@ namespace Learn_Russian_Alphabet
 		private bool       _autoPlay        = true;
 		private bool       _readTypedLetter = true;
 		private string     _input           = "";
-		private string     _word          = "";
+		private string     _word            = "";
 		private string     _answer          = "";
-		
-		private SpeechSynthesizer          _speechSynthesizerObj;
-		private CyrillicTranslator         _translator;
-		private List<Word> gameData = new List<Word>();
+
+		private SpeechSynthesizer  _speechSynthesizerObj;
+		private CyrillicTranslator _translator;
+		private List<Word>         gameData = new List<Word>();
 
 		internal static System.Resources.ResourceManager Resources;
 		public Form1() => InitializeComponent();
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			Resources = new System.Resources.ResourceManager(typeof(Form1));
+			Resources   = new System.Resources.ResourceManager(typeof(Form1));
 			_translator = new CyrillicTranslator();
-			
-			
+
 
 			var synthesizer = new SpeechSynthesizer();
 			synthesizer.SelectVoiceByHints(
 				VoiceGender.NotSet, VoiceAge.NotSet, 0, CultureInfo.CreateSpecificCulture("ru-RU"));
 			_speechSynthesizerObj                =  synthesizer;
 			_speechSynthesizerObj.SpeakCompleted += SpeakCompleted;
-			
+
 			ChangeGamemode(alphabetToolStripMenuItem, Difficulty.Alphabet);
 			StartGame();
 		}
@@ -47,13 +46,21 @@ namespace Learn_Russian_Alphabet
 		{
 			_input          = "";
 			inputLabel.Text = _input;
-			int index = new Random().Next(0, gameData.Count);
-			_word      = gameData[index].Key;
-			label.Text = _gamemode == Difficulty.AlphabetSoundOnly ? "?" : gameData[index].Key;
-			_answer    = gameData[index].Value.ToLower();
-			if (_autoPlay) ForcePlay(label.Text);
+			string oldWord = _word;
+			int    index   = 0;
+			while (_word == oldWord) {
+				index = new Random().Next(0, gameData.Count);
+				_word = gameData[index].Key;
+			}
+
+			label.Text = _gamemode == Difficulty.AlphabetSoundOnly
+				? "?"
+				: gameData[index].Key.ToUpper() + gameData[index].Key.ToLower();
+			;
+			_answer = gameData[index].Value.ToLower();
+			if (_autoPlay) ForcePlay(_word);
 		}
-		
+
 		private void SpeakCompleted(object obj, SpeakCompletedEventArgs args) => _isPlaying = false;
 
 		private void PlayStop(string s)
@@ -73,7 +80,7 @@ namespace Learn_Russian_Alphabet
 		private void label_Click(object sender, EventArgs e)
 		{
 			var me = (MouseEventArgs) e;
-			if (me.Button == MouseButtons.Right) contextMenu.Show(this, me.Location + new Size(15,11));
+			if (me.Button == MouseButtons.Right) contextMenu.Show(this, me.Location + new Size(15, 11));
 			else PlayStop(_word);
 		}
 
@@ -83,15 +90,15 @@ namespace Learn_Russian_Alphabet
 				item.Checked = false;
 			sender.Checked = true;
 			_gamemode      = mode;
-			
+
 			//load data to memory
 			gameData.Clear();
 			string path = Resources.GetString("Path-" + mode);
-			
+
 			if (path != null && File.Exists(path)) {
 				using (var file = new StreamReader(path)) {
 					string line;
-					while((line = file.ReadLine()) != null) {
+					while ((line = file.ReadLine()) != null) {
 						string[] s = line.Split(',');
 						gameData.Add(new Word(s[0], s[1]));
 					}
@@ -104,10 +111,10 @@ namespace Learn_Russian_Alphabet
 		private void alphabetToolStripMenuItem_Click(object sender, EventArgs e) =>
 			ChangeGamemode(alphabetToolStripMenuItem, Difficulty.Alphabet);
 
-		private void alphabetSoundOnlyToolStripMenuItem_Click(object sender, EventArgs e) => 
+		private void alphabetSoundOnlyToolStripMenuItem_Click(object sender, EventArgs e) =>
 			ChangeGamemode(alphabetSoundOnlyToolStripMenuItem, Difficulty.AlphabetSoundOnly);
 
-		private void missingCharacterToolStripMenuItem_Click(object sender, EventArgs e) => 
+		private void missingCharacterToolStripMenuItem_Click(object sender, EventArgs e) =>
 			ChangeGamemode(missingCharacterToolStripMenuItem, Difficulty.MissingCharacter);
 
 		private void typeWordToolStripMenuItem_Click(object sender, EventArgs e) =>
@@ -118,6 +125,7 @@ namespace Learn_Russian_Alphabet
 			autoPlayToolStripMenuItem.Checked = !autoPlayToolStripMenuItem.Checked;
 			_autoPlay                         = autoPlayToolStripMenuItem.Checked;
 		}
+
 		private void readTypedLetterToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			readTypedLetterToolStripMenuItem.Checked = !readTypedLetterToolStripMenuItem.Checked;
@@ -126,26 +134,21 @@ namespace Learn_Russian_Alphabet
 
 		private void Form1_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			
 			if (e.KeyChar == Convert.ToChar(Keys.Enter)) {
-				if (_input.ToLower() == _answer) {
-					StartGame();
-				}
+				if (_input.ToLower() == _answer) { StartGame(); }
 			} else if (e.KeyChar == Convert.ToChar(Keys.Back)) {
-				if (_input.Length > 0)_input = _input.Substring(0, _input.Length - 1);
+				if (_input.Length > 0) _input = _input.Substring(0, _input.Length - 1);
 				inputLabel.Text = _input;
 			} else if (e.KeyChar == Convert.ToChar(Keys.Escape)) {
-				if (_gamemode == Difficulty.AlphabetSoundOnly)  label.Text = label.Text == "?" ? _word : _answer;
-				else label.Text = _answer;
+				if (_gamemode == Difficulty.AlphabetSoundOnly) label.Text = label.Text == "?" ? _word : _answer;
+				else label.Text                                           = _answer;
 			} else {
 				_input          += e.KeyChar;
 				inputLabel.Text =  _input;
 				string translation = _translator.LatinToCyrillic(_input);
 				if (_readTypedLetter)
 					ForcePlay(translation.Last().ToString());
-				
 			}
 		}
-
 	}
 }
