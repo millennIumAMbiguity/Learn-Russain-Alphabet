@@ -134,6 +134,9 @@ namespace Learn_Russian_Alphabet
 			} else if (e.KeyChar == Convert.ToChar(Keys.Back)) {
 				if (_input.Length > 0)_input = _input.Substring(0, _input.Length - 1);
 				inputLabel.Text = _input;
+			} else if (e.KeyChar == Convert.ToChar(Keys.Escape)) {
+				if (_gamemode == Difficulty.AlphabetSoundOnly)  label.Text = label.Text == "?" ? _word : _answer;
+				else label.Text = _answer;
 			} else {
 				_input          += e.KeyChar;
 				inputLabel.Text =  _input;
