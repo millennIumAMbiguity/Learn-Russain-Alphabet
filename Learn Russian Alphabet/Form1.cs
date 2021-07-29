@@ -16,7 +16,8 @@ namespace Learn_Russian_Alphabet
 		private bool       _autoPlay        = true;
 		private bool       _readTypedLetter = true;
 		private string     _input           = "";
-		private string     _answer           = "";
+		private string     _word          = "";
+		private string     _answer          = "";
 		
 		private SpeechSynthesizer          _speechSynthesizerObj;
 		private CyrillicTranslator         _translator;
@@ -47,6 +48,7 @@ namespace Learn_Russian_Alphabet
 			_input          = "";
 			inputLabel.Text = _input;
 			int index = new Random().Next(0, gameData.Count);
+			_word      = gameData[index].Key;
 			label.Text = _gamemode == Difficulty.AlphabetSoundOnly ? "?" : gameData[index].Key;
 			_answer    = gameData[index].Value.ToLower();
 			if (_autoPlay) ForcePlay(label.Text);
@@ -72,7 +74,7 @@ namespace Learn_Russian_Alphabet
 		{
 			var me = (MouseEventArgs) e;
 			if (me.Button == MouseButtons.Right) contextMenu.Show(this, me.Location + new Size(15,11));
-			else PlayStop(label.Text);
+			else PlayStop(_word);
 		}
 
 		private void ChangeGamemode(ToolStripMenuItem sender, Difficulty mode)
@@ -94,7 +96,9 @@ namespace Learn_Russian_Alphabet
 						gameData.Add(new Word(s[0], s[1]));
 					}
 				}
-			} else MessageBox.Show($"{Resources.GetString("MSG-Missing_File")}\n{path}"); 
+			} else MessageBox.Show($"{Resources.GetString("MSG-Missing_File")}\n{path}");
+
+			StartGame();
 		}
 
 		private void alphabetToolStripMenuItem_Click(object sender, EventArgs e) =>
