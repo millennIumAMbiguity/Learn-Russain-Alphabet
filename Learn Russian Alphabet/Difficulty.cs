@@ -4,7 +4,7 @@
 	{
 		Alphabet,
 		AlphabetSoundOnly,
-		MissingCharacter,
 		TypeWord,
+		TranslateWord,
 	}
 }

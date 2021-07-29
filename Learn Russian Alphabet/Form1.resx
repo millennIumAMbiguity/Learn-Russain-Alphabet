@@ -132,11 +132,11 @@
   <data name="Path-AlphabetSoundOnly" xml:space="preserve">
     <value>Data\Alphabet</value>
   </data>
-  <data name="Path-MissingCharacter" xml:space="preserve">
-    <value>Data\MissingCharacter</value>
+  <data name="Path-TranslateWord" xml:space="preserve">
+    <value>Data\Words</value>
   </data>
   <data name="Path-TypeWord" xml:space="preserve">
-    <value>Data\TypeWord</value>
+    <value>Data\Words</value>
   </data>
   <data name="Path-Translation" xml:space="preserve">
     <value>Data\TranslationAlphabet</value>

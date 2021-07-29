@@ -32,7 +32,7 @@
 			this.difficultyToolStripMenuItem        = new System.Windows.Forms.ToolStripMenuItem();
 			this.alphabetToolStripMenuItem          = new System.Windows.Forms.ToolStripMenuItem();
 			this.alphabetSoundOnlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.missingCharacterToolStripMenuItem  = new System.Windows.Forms.ToolStripMenuItem();
+			this.translateWordToolStripMenuItem  = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeWordToolStripMenuItem          = new System.Windows.Forms.ToolStripMenuItem();
 			this.settingsToolStripMenuItem          = new System.Windows.Forms.ToolStripMenuItem();
 			this.autoPlayToolStripMenuItem          = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +64,7 @@
 			// 
 			// difficultyToolStripMenuItem
 			// 
-			this.difficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.alphabetToolStripMenuItem, this.alphabetSoundOnlyToolStripMenuItem, this.missingCharacterToolStripMenuItem, this.typeWordToolStripMenuItem});
+			this.difficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.alphabetToolStripMenuItem, this.alphabetSoundOnlyToolStripMenuItem, this.translateWordToolStripMenuItem, this.typeWordToolStripMenuItem});
 			this.difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
 			this.difficultyToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.difficultyToolStripMenuItem.Text = "Gamemode";
@@ -85,19 +85,19 @@
 			this.alphabetSoundOnlyToolStripMenuItem.Text  =  "Alphabet (Sound Only)";
 			this.alphabetSoundOnlyToolStripMenuItem.Click += new System.EventHandler(this.alphabetSoundOnlyToolStripMenuItem_Click);
 			// 
-			// missingCharacterToolStripMenuItem
-			// 
-			this.missingCharacterToolStripMenuItem.Name  =  "missingCharacterToolStripMenuItem";
-			this.missingCharacterToolStripMenuItem.Size  =  new System.Drawing.Size(195, 22);
-			this.missingCharacterToolStripMenuItem.Text  =  "Missing Character";
-			this.missingCharacterToolStripMenuItem.Click += new System.EventHandler(this.missingCharacterToolStripMenuItem_Click);
-			// 
 			// typeWordToolStripMenuItem
 			// 
 			this.typeWordToolStripMenuItem.Name  =  "typeWordToolStripMenuItem";
 			this.typeWordToolStripMenuItem.Size  =  new System.Drawing.Size(195, 22);
 			this.typeWordToolStripMenuItem.Text  =  "Type Word";
 			this.typeWordToolStripMenuItem.Click += new System.EventHandler(this.typeWordToolStripMenuItem_Click);
+			// 
+			// translateWordToolStripMenuItem
+			// 
+			this.translateWordToolStripMenuItem.Name  =  "translateWordToolStripMenuItem";
+			this.translateWordToolStripMenuItem.Size  =  new System.Drawing.Size(195, 22);
+			this.translateWordToolStripMenuItem.Text  =  "Translate Word";
+			this.translateWordToolStripMenuItem.Click += new System.EventHandler(this.translateWordToolStripMenuItem_Click);
 			// 
 			// settingsToolStripMenuItem
 			// 
@@ -161,8 +161,8 @@
 		private System.Windows.Forms.ToolStripMenuItem autoPlayToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
 
-		private System.Windows.Forms.ToolStripMenuItem missingCharacterToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem typeWordToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem translateWordToolStripMenuItem;
 
 		private System.Windows.Forms.ToolStripMenuItem alphabetSoundOnlyToolStripMenuItem;
 
