@@ -141,4 +141,7 @@
   <data name="Path-Translation" xml:space="preserve">
     <value>Data\TranslationAlphabet</value>
   </data>
+  <data name="MSG-No_Speech_Synthesizer_found" xml:space="preserve">
+    <value>No Speech Synthesizer found.</value>
+  </data>
 </root>
