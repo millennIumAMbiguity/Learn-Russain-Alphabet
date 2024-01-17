@@ -1,8 +1,115 @@
-Мама,Mom
+Мама,Mom,Mum
 Папа,Dad
+Бабушка,Grandma
+Дедушка,Grandpa
+Сестра,Sister
+Брат,Brother
+Дочь,Daughter
+Сын,Son
+Тётя,Aunt
+Дядя,Uncle
+Родители,Parents
+Ребёнок,Child
+Родственник,Relative
+Семья,Family
+Дом,House,home
+Квартира,Apartment
+Одежда,Clothes
+Рубашка,Shirt
+Штаны,Pants
+Юбка,Skirt
+Платье,Dress
+Куртка,Jacket
+Пальто,Coat
+Одежда,Clothes
+Обувь,Shoes
+Шляпа,Hat
+Шапка,Cap
+Перчатки,Gloves
+Сапоги,Boots
+Туфли,Shoes
+Кроссовки,Sneakers
+Сандалии,Sandals
+Шарф,Scarf
+Шарфик,Scarf
+Платок,Shawl,Handkerchief
+Носовой платок,Handkerchief
+Галстук,Tie
+Носки,Socks
+Бельё,Underwear
+Брюки,Pants
+Шорты,Shorts
+Спортивные штаны,Sweatpants
+Футболка,T-shirt
+Свитер,Sweater
+Кофта,Jacket,Sweatshirt
+Куртка,Jacket,Sweatshirt
+Джинсы,Jeans
 Картошка,Potatoes,Potato
 Водка,Vodka
 Хлеб,Bread
+Мясо,Meat
+Рыба,Fish
+Молоко,Milk
+Сыр,Cheese
+Яйцо,Egg
+Пирог,Pie
+Бутерброд,Sandwich
+Вода,Water
+Сок,Juice
+Чай,Tea
+Кофе,Coffee
+Вино,Wine
+Пиво,Beer
+Суп,Soup
+Соль,Salt
+Перец,Pepper
+Сахар,Sugar
+Мука,Flour
+Овощи,Vegetables
+Фрукты,Fruits
+Банан,Banana
+Яблоко,Apple
+Груша,Pear
+Апельсин,Orange
+Мандарин,Mandarin,Tangerine
+Лимон,Lemon
+Ананас,Pineapple
+Вишня,Cherry
+Виноград,Grapes
+Клубника,Strawberry
+Малина,Raspberry
+Черника,Blueberry
+Голубика,Blueberry
+Мороженое,Ice cream
+Конфеты,Candy
+Торт,Cake
+Печенье,Cookies
+Хлеб,Bread
+Пирожное,Cake
+Пирожок,Pie,Bun
+Блинчик,Pancake
+Пицца,Pizza
+Паста,Pasta
+Сыр,Cheese
+Хлеб,Bread
+Суп,Soup
+Салат,Salad
+Сосиска,Sausage
+Колбаса,Sausage
+Курица,Chicken
+Свинина,Pork
+Говядина,Beef
+Рыба,Fish
+Креветка,Shrimp
+Краб,Crab
+Мидия,Mussel
+Омар,Lobster
+Осьминог,Octopus
+Устрица,Oyster
+Кальмар,Squid
+Лобстер,Lobster
+Краб,Crab
 английский,English
 Россия,Russia
 русский,Russian
@@ -15,3 +122,115 @@
 дом,home
 умереть,die,to die
 идти,go
+Да,yes
+Нет,no
+Не понимаю,I don’t understand
+Помогите,Help
+Вызовите скорую,Call an ambulance
+Музей,Museum
+Поезд,Train
+Город,City
+Деревня,Village
+Дерево,Tree
+Лес,Forest
+Поле,Field
+Река,River
+Озеро,Lake
+Море,Sea
+Океан,Ocean
+Пляж,Beach
+Гора,Mountain
+Горы,Mountains
+Солнце,Sun
+Луна,Moon
+Звезда,Star
+Небо,Sky
+Земля,Earth
+Планета,Planet
+Вселенная,Universe
+Время,Time
+Час,Hour
+Минута,Minute
+Секунда,Second
+Век,Century
+Неделя,Week
+Месяц,Month
+Год,Year
+Вчера,Yesterday
+Сегодня,Today
+Завтра,Tomorrow
+Сейчас,Now
+Позже,Later
+Рано,Early
+Поздно,Late
+Никогда,Never
+Всегда,Always
+Часто,Often
+Иногда,Sometimes
+Может быть,Maybe
+Возможно,Possible
+Невозможно,Impossible
+Наверное,Probably
+Точно,Exactly
+Почти,Almost
+Очень,Very
+Много,Many
+Мало,Few
+Немного,A little
+Ничего,Nothing
+Всё,Everything
+Кто,Who
+Что,What
+Когда,When
+Где,Where
+Почему,Why
+Как,How
+улица,Street
+отель,Hotel
+ресторан,Restaurant
+аптека,Pharmacy
+супермаркет,Supermarket
+туалет,Toilet
+аэропорт,Airport
+вокзал,Train station
+музей,Museum
+гид,Guide
+экскурсия,Excursion
+достопримечательность,Attraction,Landmark
+памятник,Monument
+карта,Map,card
+багаж,Luggage
+паспорт,Passport
+билет,Ticket
+Повернуть,To turn
+Площадь,Square
+Метро,Metro,Subway
+Поезд,Train
+Автобус,Bus
+Такси,Taxi
+Виза,Visa
+Магазин,Shop,Store
+Касса,Cash register,Checkout
+Распродажа,Sale
+Дешево,Cheap,Inexpensive
+Дорого,Expensive
+Купить,To buy,To pay,buy
+Скидка,Discount
+Покупка,Purchase
+Покупатель,Customer
+Продавец,Seller
+Продавать,To sell
+привет,hello
+Здравствуйте,hello!,Hello
+Добрый день,Good afternoon,good day
+Добрый вечер,Good evening
+Доброе утро,Good morning
+До свидания,Goodbye
+Пока,Bye
+До скорого,See you soon,Until soon
+До завтра,See you tomorrow,Until tomorrow
+До встречи,See you later,Before meeting
+Спасибо,Thank you,Thanks
+Пожалуйста,Please,You are welcome
+Извините,Sorry
+Простите,Sorry
