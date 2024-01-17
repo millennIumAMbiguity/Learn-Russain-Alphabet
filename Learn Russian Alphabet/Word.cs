@@ -4,7 +4,7 @@ namespace Learn_Russian_Alphabet
 {
 	public struct Word
 	{
-		public string   Key;
+		public readonly string Key;
 		public string[] Values;
 
 		public Word(string key, string[] values)

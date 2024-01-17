@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net5.0-windows</TargetFramework>
+        <TargetFramework>net6.0-windows</TargetFramework>
         <RootNamespace>Learn_Russian_Alphabet</RootNamespace>
         <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>

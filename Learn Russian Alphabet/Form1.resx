@@ -144,4 +144,7 @@
   <data name="MSG-No_Speech_Synthesizer_found" xml:space="preserve">
     <value>No Speech Synthesizer found.</value>
   </data>
+  <data name="MSG-Null_String" xml:space="preserve">
+    <value>String Value Null</value>
+  </data>
 </root>
